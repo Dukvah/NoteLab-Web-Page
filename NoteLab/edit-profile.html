@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NoteLab</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Tablet-->
+    <link rel="stylesheet" media="(max-width:1300px)" href="./css/tablet.css">
+    <!--Tablet2-->
+    <link rel="stylesheet" media="(max-width:770px)" href="./css/tablet2.css">
+    <!--Mobile-->
+    <link rel="stylesheet" media="(max-width:500px)" href="./css/mobile.css">
+    <!--Style-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!--Lib-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-light color-main mb-5" id="navbar">
+        <div class="container-fluid no-p">
+            <div class="col-3 col-lg-2 ps-3" id="nav-col-left">
+                <a class="navbar-brand" id="main-title" href="index.html">NoteLab</a>
+            </div>
+            <div class="col-6 col-lg-3 " id="nav-col-center">
+                <form class="d-flex justify-content-center align-items-center">
+                    <input class="input-main form-control" type="search" placeholder="Ara" aria-label="Search">
+                    <button class="btn btn-md d-flex justify-content-center align-items-center button-search"
+                        type="submit" title="Ara"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="col-3 d-flex justify-content-end" id="nav-col-right">
+                <div class="dropdown">
+                    <button class="btn btn-default float-end" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                        <img src="./images/user.png" class="img-thumbnail img-fluid img-main float-end">
+                    </button>
+                    <ul class="dropdown-menu dropdown-main" aria-labelledby="dropdownMenuButton1">
+                        <li><span class="dropdown-item-text ">
+                                <div class="row d-flex align-items-center pb-3" id="dropdown-header">
+                                    <div class="col-4"><img src="./images/user.png"
+                                            class="img-thumbnail img-fluid img-main"></div>
+                                    <div class="col-8 text-main">Muhammed İkbal Kapar</div>
+                                </div>
+                            </span>
+                        </li>
+                        <li><a class="dropdown-item" href="./profile.html">Profilim</a></li>
+                        <li><a class="dropdown-item" href="#">Yardım</a></li>
+                        <li><a class="dropdown-item" href="./edit-profile.html">Hesap Ayarları</a></li>
+                        <li><a class="dropdown-item" href="#">Oturumu Kapat</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- OFFCANVAS -->
+
+    <button class="btn btn-default button-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasID">
+        <i class="fas fa-chevron-right"></i></button>
+    <div class="offcanvas offcanvas-start color-main" id="offcanvasID">
+        <div class="offcanvas-header d-flex justify-content-end  mt-3 me-3">
+            <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body d-flex align-items-start flex-column mt-5 ms-4">
+            <h1 class="offcanvas-title mb-5">Menü</h1>
+            <div class="d-grid gap-2 col-10 mx-auto">
+                <button class="btn btn-default" id="menu-btn" type="button"><i
+                        class="fas fa-book me-2"></i>Derslerim</button>
+                <button class="btn btn-default" id="menu-btn" type="button"><i
+                        class="fas fa-star me-2"></i>Favorilerim</button>
+                <button class="btn btn-default" id="menu-btn" type="button"><i
+                        class="fas fa-pencil-alt me-2"></i>Notlarım</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- EDİT PROFILE -->
+
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-12 col-12">
+                <div
+                    class="row d-flex flex-column align-items-center justify-content-center text-center text-second">
+                    <div class="profilepic d-flex align-items-center justify-content-center btn my-3" type="button"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img class="profilepic-image" src="./images/user.png" id="id_profilepic"/>
+                        <div class="profilepic-content">
+                            <span class="profilepic-icon"><i class="fas fa-camera"></i></span>
+                            <span class="profilepic-text">RESMİ DEĞİŞTİR</span>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Profil fotoğrafı yükleyin</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row d-flex justify-content-center align-items-center mb-4">
+                                        <img class="profilepic-image-preview" src="./images/user.png" id="id_profilepic_preview"/>
+                                    </div>
+                                    <div class="row">
+                                        <form class="d-flex flex-column justify-content-center align-items-center" action="#">
+                                            <div class="input-file-container">
+                                                <input class="input-file" id="my-file" type="file"
+                                                    accept="image/png, image/jpg, image/jpeg"  onchange="loadFile(event)">
+                                                <label tabindex="0" for="my-file" class="input-file-trigger">Bir
+                                                    fotoğraf seçin...</label>
+                                            </div>
+                                            <p class="file-return"></p>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                                    <button type="button" class="btn btn-primary">Yükle</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Muhammed İkbal Kapar</h4>
+                    <p>Bilgisayar Mühendisi</p>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-12">
+                <div class="row d-flex flex-column align-items-center justify-content-center">
+                    <p class="text-large" style="width: 70%">Temel Bilgiler</p>
+                    <input type="text" value="Muhammed İkbal" maxlength="64" placeholder="Adınız"
+                        class="form-control profile-input-area" id="id_name">
+                    <input type="text" value="Kapar" maxlength="64" placeholder="Soyadınız"
+                        class="form-control profile-input-area" id="id_surname">
+                    <input type="text" value="Bilgisayar Mühendisi" maxlength="60" placeholder="Ünvan"
+                        class="form-control profile-input-area" id="id_job_title">
+                    <textarea cols="30" rows="5" value="Hakkınızda" placeholder="Hakkınızda"
+                        class="form-control profile-input-area mb-5" id="id_about"></textarea>
+                    <p class="text-large" style="width: 70%">Hesap</p>
+                    <input type="email" value="Elifay58@outlook.com" placeholder="Mailiniz"
+                        class="form-control profile-input-area" id="id_email">
+                    <input type="password" maxlength="64" minlength="6" placeholder="Mevcut Şifreyi Girin"
+                        class="profile-input-area form-control" required="" id="id_current_password">
+                    <input type="password" maxlength="64" minlength="6" placeholder="Yeni Şifreyi Girin" data-min-score="0"
+                        class="profile-input-area form-control" required="" id="id_new_password">
+                    <input type="password" maxlength="64" minlength="6" placeholder="Yeni Şifreyi Tekrar Girin"
+                        class="profile-input-area form-control mb-5" required="" id="id_confirm_new_password">
+                    <p class="text-large" style="width: 70%;">Bildirim Tercihleri</p>
+                    <div class="row checkbox-style mb-2" style="width: 60%;">
+                        <div class="form-check">
+                            <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label ms-2" for="flexCheckDefault">
+                                Promosyonlar, not önerileri ve NoteLab'ın sunduğu yararlı kaynaklar.
+                            </label>
+                        </div> 
+                    </div>
+                    <div class="row checkbox-style mb-5" style="width: 60%;">
+                        <div class="form-check">
+                            <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault1">
+                            <label class="form-check-label ms-2" for="flexCheckDefault1">
+                                Takip ettiğim kullanıcılardan bildirimler.
+                            </label>
+                        </div> 
+                    </div>
+                    <div class="row checkbox-style mb-5" style="width: 60%;" for="flexCheckDefault2">
+                        <div class="form-check">
+                            <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault2">
+                            <label class="form-check-label ms-2" for="flexCheckDefault2">
+                                Bana e-posta gönderme.
+                            </label>
+                        </div> 
+                    </div>
+                    <div class="submit-row d-flex justify-content-end" style="width: 60%;">
+                        <input type="submit" name="submit" value="Kaydet" class="btn button-main mt-3" id="id-submit">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <!-- FOOTER -->
+
+    <div class="container text-second border-top">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-lg-2 col-sm-6 mb-5">
+                    <h3>NoteLab</h3>
+                </div>
+                <div class="col-lg-2 col-sm-6 mb-5">
+                    <h5>Menü</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Anasayfa</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Topluluk</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Blog</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Oturum Aç</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6 mb-5">
+                    <h5>Yardım</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Kullanım Koşulları</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Gizlilik Politikası</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">SSS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Hakkımızda</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">İletişim</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 offset-lg-1 col-sm-6 mb-5">
+                    <form>
+                        <h5>Yeniliklerden haberdar olun!</h5>
+                        <p>Yeniliklerden anında haberdar olmak için haber bültenimize abone olun.</p>
+                        <div class="d-flex justify-content-start">
+                            <label for="inp" class="inp me-2">
+                                <input type="text" id="inp" placeholder="&nbsp;">
+                                <span class="label">Mail</span>
+                                <span class="focus-bg"></span>
+                            </label>
+                            <button class="btn  button-main" type="button">Abone Ol</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+                <p>© 2021 NoteLab, Inc. Tüm hakları saklıdır.</p>
+                <ul class="list-unstyled d-flex justify-content-end">
+                    <li>
+                        <a href="#" class="fab fa-facebook shadow-box-main"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-twitter shadow-box-main"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-instagram shadow-box-main"></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+    <!--AnimeJS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--Owl-->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

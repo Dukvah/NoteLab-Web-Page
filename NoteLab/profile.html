@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NoteLab</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Tablet-->
+    <link rel="stylesheet" media="(max-width:1300px)" href="./css/tablet.css">
+    <!--Tablet2-->
+    <link rel="stylesheet" media="(max-width:770px)" href="./css/tablet2.css">
+    <!--Mobile-->
+    <link rel="stylesheet" media="(max-width:500px)" href="./css/mobile.css">
+    <!--Style-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--Lib-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-light color-main" id="navbar">
+        <div class="container-fluid no-p">
+            <div class="col-3 col-lg-2 ps-3" id="nav-col-left">
+                <a class="navbar-brand" id="main-title" href="index.html">NoteLab</a>
+            </div>
+            <div class="col-6 col-lg-3 " id="nav-col-center">
+                <form class="d-flex justify-content-center align-items-center">
+                    <input class="input-main form-control" type="search" placeholder="Ara" aria-label="Search">
+                    <button class="btn btn-md d-flex justify-content-center align-items-center button-search"
+                        type="submit" title="Ara"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="col-3 d-flex justify-content-end" id="nav-col-right">
+                <div class="dropdown">
+                    <button class="btn btn-default float-end" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                        <img src="./images/user.png" class="img-thumbnail img-fluid img-main float-end">
+                    </button>
+                    <ul class="dropdown-menu dropdown-main" aria-labelledby="dropdownMenuButton1">
+                        <li><span class="dropdown-item-text ">
+                                <div class="row d-flex align-items-center pb-3" id="dropdown-header">
+                                    <div class="col-4"><img src="./images/user.png"
+                                            class="img-thumbnail img-fluid img-main"></div>
+                                    <div class="col-8 text-main">Muhammed İkbal Kapar</div>
+                                </div>
+                            </span>
+                        </li>
+                        <li><a class="dropdown-item" href="./profile.html">Profilim</a></li>
+                        <li><a class="dropdown-item" href="#">Yardım</a></li>
+                        <li><a class="dropdown-item" href="./edit-profile.html">Hesap Ayarları</a></li>
+                        <li><a class="dropdown-item" href="#">Oturumu Kapat</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- OFFCANVAS -->
+
+    <button class="btn btn-default button-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasID">
+        <i class="fas fa-chevron-right"></i></button>
+    <div class="offcanvas offcanvas-start color-main" id="offcanvasID">
+        <div class="offcanvas-header d-flex justify-content-end  mt-3 me-3">
+            <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body d-flex align-items-start flex-column mt-5 ms-4">
+            <h1 class="offcanvas-title mb-5">Menü</h1>
+            <div class="d-grid gap-2 col-10 mx-auto">
+                <button class="btn btn-default" id="menu-btn" type="button"><i
+                        class="fas fa-book me-2"></i>Derslerim</button>
+                <button class="btn btn-default" id="menu-btn" type="button"><i
+                        class="fas fa-star me-2"></i>Favorilerim</button>
+                <button class="btn btn-default" id="menu-btn" type="button"><i
+                        class="fas fa-pencil-alt me-2"></i>Notlarım</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROFILE VIEW -->
+
+    <div class="row mb-4">
+        <div class="row d-flex text-second background-second mb-4">
+            <div class="col-lg-2 offset-lg-1 col-sm-12">
+                <div class="d-flex justify-content-center">
+                    <img id="user-profile-img" class="img-thumbnail" src="./images/user.png">
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 flex-column d-flex name-position justify-content-center align-items-start ">
+                <h3>Muhammed İkbal Kapar</h3>
+                <p class="text-second p-1">546 Takipçi</p>
+            </div>
+            <div class="col-lg-2 col-sm-12 offset-lg-3 d-flex justify-content-center align-items-end">
+                <button class="btn button-main mb-5 me-3"><i class="far fa-bell"></i></button>
+                <button class="btn button-main mb-5 me-3"><i class="fas fa-plus me-2"></i>Takip</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NOTE CARDS -->
+
+    <div class="row cards-margin text-second">
+        <div class="column">
+            <div class="card">
+                <img src="./images/biyoloji.jpg" class="card-img-top mb-1">
+                <div class="card-body p-3 pt-1 ps-2">
+                    <div class="row">
+                        <div class="col-11">
+                            <h6 class="card-text mb-2">Biyoloji-1 Ders Notları (Organik Bileşikler)</h6>
+                        </div>
+                        <div class="col-1">
+                            <div class="dropup">
+                                <button class="btn pt-0" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item text-small" href="#"><i
+                                                class="far fa-bookmark me-2"></i>Kitaplığına
+                                            ekle</a></li>
+                                    <li><a class="dropdown-item text-small" href="#"><i
+                                                class="far fa-flag me-2"></i>Bildir</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex">
+                        <p class="col-lg-6 col-12 card-info-text mb-1"><small class="text-muted"><i
+                                    class="fas fa-history"></i> 5
+                                gün önce</small></p>
+                        <p class="col-lg-6 col-12 float-end card-info-text"><small class="text-muted"><i
+                                    class="fas fa-eye"></i> 684
+                                görüntüleme</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="./images/biyoloji.jpg" class="card-img-top mb-1">
+                <div class="card-body p-3 pt-1 ps-2">
+                    <div class="row">
+                        <div class="col-11">
+                            <h6 class="card-text mb-2">Biyoloji-1 Ders Notları (Organik Bileşikler)</h6>
+                        </div>
+                        <div class="col-1">
+                            <div class="dropup">
+                                <button class="btn pt-0" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item text-small" href="#"><i
+                                                class="far fa-bookmark me-2"></i>Kitaplığına
+                                            ekle</a></li>
+                                    <li><a class="dropdown-item text-small" href="#"><i
+                                                class="far fa-flag me-2"></i>Bildir</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex">
+                        <p class="col-lg-6 col-12 card-info-text mb-1"><small class="text-muted"><i
+                                    class="fas fa-history"></i> 5
+                                gün önce</small></p>
+                        <p class="col-lg-6 col-12 float-end card-info-text"><small class="text-muted"><i
+                                    class="fas fa-eye"></i> 684
+                                görüntüleme</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="./images/biyoloji.jpg" class="card-img-top mb-1">
+                <div class="card-body p-3 pt-1 ps-2">
+                    <div class="row">
+                        <div class="col-11">
+                            <h6 class="card-text mb-2">Biyoloji-1 Ders Notları (Organik Bileşikler)</h6>
+                        </div>
+                        <div class="col-1">
+                            <div class="dropup">
+                                <button class="btn pt-0" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item text-small" href="#"><i
+                                                class="far fa-bookmark me-2"></i>Kitaplığına
+                                            ekle</a></li>
+                                    <li><a class="dropdown-item text-small" href="#"><i
+                                                class="far fa-flag me-2"></i>Bildir</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex">
+                        <p class="col-lg-6 col-12 card-info-text mb-1"><small class="text-muted"><i
+                                    class="fas fa-history"></i> 5
+                                gün önce</small></p>
+                        <p class="col-lg-6 col-12 float-end card-info-text"><small class="text-muted"><i
+                                    class="fas fa-eye"></i> 684
+                                görüntüleme</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="./images/biyoloji.jpg" class="card-img-top mb-1">
+                <div class="card-body p-3 pt-1 ps-2">
+                    <div class="row">
+                        <div class="col-11">
+                            <h6 class="card-text mb-2">Biyoloji-1 Ders Notları (Organik Bileşikler)</h6>
+                        </div>
+                        <div class="col-1">
+                            <div class="dropup">
+                                <button class="btn pt-0" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item text-small" href="#"><i
+                                                class="far fa-bookmark me-2"></i>Kitaplığına
+                                            ekle</a></li>
+                                    <li><a class="dropdown-item text-small" href="#"><i
+                                                class="far fa-flag me-2"></i>Bildir</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex">
+                        <p class="col-lg-6 col-12 card-info-text mb-1"><small class="text-muted"><i
+                                    class="fas fa-history"></i> 5
+                                gün önce</small></p>
+                        <p class="col-lg-6 col-12 float-end card-info-text"><small class="text-muted"><i
+                                    class="fas fa-eye"></i> 684
+                                görüntüleme</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="./images/biyoloji.jpg" class="card-img-top mb-1">
+                <div class="card-body p-3 pt-1 ps-2">
+                    <div class="row">
+                        <div class="col-11">
+                            <h6 class="card-text mb-2">Biyoloji-1 Ders Notları (Organik Bileşikler)</h6>
+                        </div>
+                        <div class="col-1">
+                            <div class="dropup">
+                                <button class="btn pt-0" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item text-small" href="#"><i
+                                                class="far fa-bookmark me-2"></i>Kitaplığına
+                                            ekle</a></li>
+                                    <li><a class="dropdown-item text-small" href="#"><i
+                                                class="far fa-flag me-2"></i>Bildir</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex">
+                        <p class="col-lg-6 col-12 card-info-text mb-1"><small class="text-muted"><i
+                                    class="fas fa-history"></i> 5
+                                gün önce</small></p>
+                        <p class="col-lg-6 col-12 float-end card-info-text"><small class="text-muted"><i
+                                    class="fas fa-eye"></i> 684
+                                görüntüleme</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="container text-second border-top">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-lg-2 col-sm-6 mb-5">
+                    <h3>NoteLab</h3>
+                </div>
+                <div class="col-lg-2 col-sm-6 mb-5">
+                    <h5>Menü</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Anasayfa</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Topluluk</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Blog</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Oturum Aç</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6 mb-5">
+                    <h5>Yardım</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Kullanım Koşulları</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Gizlilik Politikası</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">SSS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Hakkımızda</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">İletişim</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 offset-lg-1 col-sm-6 mb-5">
+                    <form>
+                        <h5>Yeniliklerden haberdar olun!</h5>
+                        <p>Yeniliklerden anında haberdar olmak için haber bültenimize abone olun.</p>
+                        <div class="d-flex justify-content-start">
+                            <label for="inp" class="inp me-2">
+                                <input type="text" id="inp" placeholder="&nbsp;">
+                                <span class="label">Mail</span>
+                                <span class="focus-bg"></span>
+                            </label>
+                            <button class="btn  button-main" type="button">Abone Ol</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+                <p>© 2021 NoteLab, Inc. Tüm hakları saklıdır.</p>
+                <ul class="list-unstyled d-flex justify-content-end">
+                    <li>
+                        <a href="#" class="fab fa-facebook shadow-box-main"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-twitter shadow-box-main"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-instagram shadow-box-main"></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+    <!--AnimeJS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--Owl-->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

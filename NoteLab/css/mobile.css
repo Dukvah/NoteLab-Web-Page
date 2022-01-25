@@ -1,0 +1,34 @@
+.dropdown-main{
+    margin-left: -200px !important;
+}
+
+.button-search{
+    height: 30px !important;
+    width: 30px !important; 
+
+}
+
+.img-main{
+    height: 35px !important;
+    width: 35px !important;
+
+}
+
+#nav-col-right{
+    padding-right: unset !important;
+}
+
+#nav-col-center{
+    padding-left: 30px !important;
+}
+
+.name-position{
+    align-items: center !important;
+}
+
+.column{
+    width: 100% !important;
+}
+
+
+

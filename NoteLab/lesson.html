@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NoteLab</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Tablet-->
+    <link rel="stylesheet" media="(max-width:1300px)" href="./css/tablet.css">
+    <!--Tablet2-->
+    <link rel="stylesheet" media="(max-width:770px)" href="./css/tablet2.css">
+    <!--Mobile-->
+    <link rel="stylesheet" media="(max-width:500px)" href="./css/mobile.css">
+    <!--Style-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--Lib-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</head>
+
+<body style="overflow-x: hidden;">
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-light color-main" id="navbar">
+        <div class="container-fluid no-p">
+            <div class="col-3 col-lg-2 ps-3" id="nav-col-left">
+                <a class="navbar-brand" id="main-title" href="index.html">NoteLab</a>
+            </div>
+            <div class="col-6 col-lg-3 " id="nav-col-center">
+                <form class="d-flex justify-content-center align-items-center">
+                    <input class="input-main form-control" type="search" placeholder="Ara" aria-label="Search">
+                    <button class="btn btn-md d-flex justify-content-center align-items-center button-search"
+                        type="submit" title="Ara"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="col-3 d-flex justify-content-end" id="nav-col-right">
+                <div class="dropdown">
+                    <button class="btn btn-default float-end" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                        <img src="./images/user.png" class="img-thumbnail img-fluid img-main float-end">
+                    </button>
+                    <ul class="dropdown-menu dropdown-main" aria-labelledby="dropdownMenuButton1">
+                        <li><span class="dropdown-item-text ">
+                                <div class="row d-flex align-items-center pb-3" id="dropdown-header">
+                                    <div class="col-4"><img src="./images/user.png"
+                                            class="img-thumbnail img-fluid img-main"></div>
+                                    <div class="col-8 text-main">Muhammed İkbal Kapar</div>
+                                </div>
+                            </span>
+                        </li>
+                        <li><a class="dropdown-item" href="./profile.html">Profilim</a></li>
+                        <li><a class="dropdown-item" href="#">Yardım</a></li>
+                        <li><a class="dropdown-item" href="./edit-profile.html">Hesap Ayarları</a></li>
+                        <li><a class="dropdown-item" href="#">Oturumu Kapat</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- OFFCANVAS -->
+
+    <button class="btn btn-default button-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasID">
+        <i class="fas fa-chevron-right"></i></button>
+    <div class="offcanvas offcanvas-start color-main" id="offcanvasID">
+        <div class="offcanvas-header d-flex justify-content-end  mt-3 me-3">
+            <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body d-flex align-items-start flex-column mt-5 ms-4">
+            <h1 class="offcanvas-title mb-5">Menü</h1>
+            <div class="d-grid gap-2 col-10 mx-auto">
+                <button class="btn btn-default" id="menu-btn" type="button"><i
+                        class="fas fa-book me-2"></i>Derslerim</button>
+                <button class="btn btn-default" id="menu-btn" type="button"><i
+                        class="fas fa-star me-2"></i>Favorilerim</button>
+                <button class="btn btn-default" id="menu-btn" type="button"><i
+                        class="fas fa-pencil-alt me-2"></i>Notlarım</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- LESSON -->
+
+    <div class="row">
+        <div class="lesson-screen-width" id="lesson-screen-width">
+            <div class="row lesson-screen">
+                <button class="btn btn-topics" onclick="handleNot()" id="not-icerigi"><i class="fas fa-arrow-left me-2"></i>Not İçeriği</button>
+            </div>
+            <div class="row">
+                <nav>
+                    <div class="nav nav-tabs ps-5" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                            aria-selected="true">Genel Bakış</button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-comments" type="button" role="tab" aria-controls="nav-profile"
+                            aria-selected="false">Yorumlar</button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-notes"
+                            type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Notlarım</button>
+                    </div>
+                </nav>
+                <div class="tab-content  p-5" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="row d-flex justify-content-between mb-3">
+                            <p class="col-lg-9 col-12 text-medium lesson-title">Biyoloji-1 Ders Notları (Organik
+                                Bileşikler)</p>
+                            <button type="button" class="col-lg-3 col-12 btn btn-vote col" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                <i class="fas fa-star me-2"></i>Puan verin
+                            </button>
+                        </div>
+                        <p class="text-small pe-5"> Hayatın gizemleri, tarihteki tüm insanları etkilediğinden; insanın
+                            fiziksel yapısı, bitkiler ve hayvanlar hakkındaki araştırmalar tüm toplumların tarihlerinde
+                            yer bulur. Bu ilginin bir kısmı, insanların hayata hükmetme ve doğal kaynakları kullanma
+                            isteğinden gelmektedir. Soruların peşinden koşmak, insanlara, organizmaların yapıları
+                            hakkında bilgi kazandırmış ve yaşam standartları zamanla yükselmiştir. İlginin diğer kısmı
+                            ise, doğayı kontrol etme isteğinden çok, onu anlama isteğinden gelmektedir. Bu
+                            araştırmaların ilerletilmesi, bizim dünya hakkındaki düşüncelerimizi değiştirmiştir.</p>
+                    </div>
+                    <div class="tab-pane fade" id="nav-comments" role="tabpanel" aria-labelledby="nav-profile-tab">...
+                    </div>
+                    <div class="tab-pane fade" id="nav-notes" role="tabpanel" aria-labelledby="nav-contact-tab">...
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div id="not-icerigi-menu" class="lesson-topics-width">
+            <div class="row flex-column" id="col-konular">
+                <div class="col-12 text-large d-flex justify-content-between p-4" style="border-bottom: 2px solid #1C1D1F;">
+                    <div>Not İçeriği</div> <button onclick="handleClose()" type="button" class="btn-close " aria-label="Close"></button>
+                </div>
+                <button class="btn btn-lesson d-flex justify-content-between p-3" type="button" id="dropdownMenuClickable"
+                    data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+                    <p class="drop-lesson text-medium m-0">Ünite 1: Derse Giriş</p><i class="fas fa-chevron-down float-end"></i>
+                </button>
+                <ul id="accordion" class="dropdown-menu menu-lesson" aria-labelledby="dropdownMenuClickable">
+                    <li><a class="dropdown-item" href="#">Biyoloji Nedir ?</a></li>
+                    <li><a class="dropdown-item" href="#">Biyoloji Alanları Nelerdir ?</a></li>
+                    <li><a class="dropdown-item" href="#">Ülkemizde Biyoloji Bilimi</a></li>
+                </ul>
+                <button class="btn btn-lesson d-flex justify-content-between p-3" type="button"
+                    id="dropdownMenuClickable" data-bs-toggle="dropdown" data-bs-auto-close="false"
+                    aria-expanded="false">
+                    <p class="drop-lesson text-medium m-0">Ünite 2: Yaşam Bilimi Biyoloji</p><i
+                        class="fas fa-chevron-down float-end"></i>
+                </button>
+                <ul class="dropdown-menu menu-lesson" aria-labelledby="dropdownMenuClickable">
+                    <li><a class="dropdown-item" href="#">Bilimsel Bilginin Kaynak ve Dayanakları</a></li>
+                    <li><a class="dropdown-item" href="#">Bilimde Öznellik ve Nesnellik</a></li>
+                    <li><a class="dropdown-item" href="#">Bilimsel Bilginin Değişebilir Yapısı</a></li>
+                    <li><a class="dropdown-item" href="#">Bilim Toplum İlişkisi</a></li>
+                </ul>
+                <button class="btn btn-lesson d-flex justify-content-between p-3" type="button"
+                    id="dropdownMenuClickable" data-bs-toggle="dropdown" data-bs-auto-close="false"
+                    aria-expanded="false">
+                    <p class="drop-lesson text-medium m-0">Ünite 3: Biyolojinin Sorunlarımıza Sunduğu Çözümler</p><i
+                        class="fas fa-chevron-down float-end"></i>
+                </button>
+                <ul class="dropdown-menu menu-lesson" aria-labelledby="dropdownMenuClickable">
+                    <li><a class="dropdown-item" href="#">Gıda Sıkıntısı ve Beslenme ile İlgili Sorunların Çözümünde
+                            Biyolojinin Katkıları</a></li>
+                    <li><a class="dropdown-item" href="#">Sağlık Sorunlarının Çözümünde Biyolojinin Katkıları</a></li>
+                    <li><a class="dropdown-item" href="#">Çevre Sorunlarının Çözümünde Biyolojinin Katkıları</a></li>
+                    <li><a class="dropdown-item" href="#">Biyolojik Çeşitliliğin Korunmasında Biyolojinin Katkıları</a>
+                    </li>
+                </ul>
+                <button class="btn btn-lesson d-flex justify-content-between p-3" type="button"
+                    id="dropdownMenuClickable" data-bs-toggle="dropdown" data-bs-auto-close="false"
+                    aria-expanded="false">
+                    <p class="drop-lesson text-medium m-0">Ünite 4: Hücre</p><i
+                        class="fas fa-chevron-down float-end"></i>
+                </button>
+                <ul class="dropdown-menu menu-lesson" aria-labelledby="dropdownMenuClickable">
+                    <li><a class="dropdown-item" href="#">Hücrenin Yapısı</a></li>
+                    <li><a class="dropdown-item" href="#">Hücreden Madde Geçişleri</a></li>
+                    <li><a class="dropdown-item" href="#">Sitoplazma</a></li>
+                    <li><a class="dropdown-item" href="#">Çekirdek</a></li>
+                    <li><a class="dropdown-item" href="#">Hücre Zarı</a></li>
+                    <li><a class="dropdown-item" href="#">Hücre Duvarı</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+
+    <div class="container text-second border-top">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-lg-2 col-sm-6 mb-5">
+                    <h3>NoteLab</h3>
+                </div>
+                <div class="col-lg-2 col-sm-6 mb-5">
+                    <h5>Menü</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Anasayfa</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Topluluk</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Blog</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Oturum Aç</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6 mb-5">
+                    <h5>Yardım</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Kullanım Koşulları</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Gizlilik Politikası</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">SSS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Hakkımızda</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">İletişim</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 offset-lg-1 col-sm-6 mb-5">
+                    <form>
+                        <h5>Yeniliklerden haberdar olun!</h5>
+                        <p>Yeniliklerden anında haberdar olmak için haber bültenimize abone olun.</p>
+                        <div class="d-flex justify-content-start">
+                            <label for="inp" class="inp me-2">
+                                <input type="text" id="inp" placeholder="&nbsp;">
+                                <span class="label">Mail</span>
+                                <span class="focus-bg"></span>
+                            </label>
+                            <button class="btn  button-main" type="button">Abone Ol</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+                <p>© 2021 NoteLab, Inc. Tüm hakları saklıdır.</p>
+                <ul class="list-unstyled d-flex justify-content-end">
+                    <li>
+                        <a href="#" class="fab fa-facebook shadow-box-main"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-twitter shadow-box-main"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-instagram shadow-box-main"></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+    <!--AnimeJS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--Owl-->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
